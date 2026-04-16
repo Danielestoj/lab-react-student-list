@@ -34,7 +34,6 @@ function AddStudentForm({ onAddStudent }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* ... form inputs remain the same ... */}
       <h2>Add New Student</h2>
       <div>
         <label>Full Name:</label>
