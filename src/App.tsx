@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import { studentsData } from './students'
+import  AddStudentForm  from './components/AddStudentForm';
 import './App.css'
 
 function App() {
   const [students, setStudents] = useState(studentsData);
 
+  const addStudent = newStudent => {
+    setStudents([...students, newStudent]);
+  };
+
   return (
     <div className="App">
+      <AddStudentForm onAddStudent={addStudent} />
       <h1>Student List</h1>
       <div className="student-list">
         {students.map(student => (
